@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<!--
+ Filename: madLibs.html
+ Written by: Jules Leow (JL)
+ Class: NEWM-N220
+ Purpose: Create a page where users can input a noun, a verb, and a place and the story generator takes those inputs and sets them in the story. Use local storage to persist data. Use string replace.
+ Date: 04/07/2018
+ Modification History:
+ 04/07/2018: Original Build
+-->
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mad Libs</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/madLibs.css">
+  </head>
+
+  <body>
+    <h1>Mad Libs Generator</h1>
+    <div class="container">
+      <label for="noun">Noun:</label>
+      <br /><span id="noun" class="error"></span>
+      <input type="text" id="userNoun" name="userNoun" required autofocus />
+      <br /><br />
+
+      <label for="verb">Verb:</label>
+      <br /><span id="verb" class="error"></span>
+      <input type="text" id="userVerb" name="userVerb" required autofocus />
+      <br /><br />
+
+      <label for="location">Location:</label>
+      <br /><span id="location" class="error"></span>
+      <input type="text" id="userLocation" name="userLocation" required autofocus />
+      <br /><br />
+
+      <button id="generateML">Generate Mad Libs</button>
+
+      <div id="output"></div>
+    </div>
+  </body>
+
+  <script src="js/madLibs.js"></script> <!-- Link to the script to the madLibs script -->
+
+</html>
