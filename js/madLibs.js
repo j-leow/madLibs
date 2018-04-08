@@ -8,3 +8,41 @@
  Modification History:
  04/07/2018: Original Build
 ***************************************/
+
+// Create initial story
+var story = "Luke Skywalker battled his inner {{noun}} as he {{verb}} to be a Jedi at {{location}} with Master Yoda.";
+
+// Select generate button. Add event listener, call function to generate story
+var generateBtn = document.querySelector("#generateML");
+generateBtn.addEventListener('click', generateMadLibs);
+
+// Create function to generate mad libs. 
+// Use string replace to substitute placeholders with user input
+// Use local storage to persist data
+function generateMadLibs(event) {
+  // Create variable to hold new story
+  var newStory = "";
+
+  // Get HTML elements
+  var userNoun = document.querySelector("#userNoun");
+  var userVerb = document.querySelector("#userVerb");
+  var userLocation = document.querySelector("#userLocation");
+  var output = document.querySelector("#output");
+
+  // Use string replace to sub words into placeholders
+  newStory = story.replace("{{noun}}", userNoun.value);
+  // console.log(userNoun.value);
+  newStory = story.replace("{{verb}}", userVerb.value);
+  newStory = story.replace("{{location}}", userLocation.value);
+
+  // Check to see if there's anything in local story. If not, add newStory into local storage.
+
+  if(localStorage['newStory'] != null) {
+    localStorage['newStory'] = newStory;
+  }
+
+  // Output results
+  output.innerHTML = newStory;
+
+  event.preventDefault();
+}
