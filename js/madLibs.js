@@ -31,9 +31,12 @@ function generateMadLibs(event) {
 
   // Use string replace to sub words into placeholders
   newStory = story.replace("{{noun}}", userNoun.value);
-  // console.log(userNoun.value);
-  newStory = story.replace("{{verb}}", userVerb.value);
-  newStory = story.replace("{{location}}", userLocation.value);
+  // console.log("noun " + newStory);
+  newStory = newStory.replace("{{verb}}", userVerb.value);
+  // console.log("verb " + newStory);
+  newStory = newStory.replace("{{location}}", userLocation.value);
+  // console.log("location " + newStory);
+  
 
   // Check to see if there's anything in local story. If not, add newStory into local storage.
 
@@ -42,7 +45,7 @@ function generateMadLibs(event) {
   }
 
   // Output results
-  output.innerHTML = newStory;
+  output.innerHTML = "<br> " + newStory;
 
   event.preventDefault();
 }
