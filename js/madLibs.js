@@ -48,3 +48,13 @@ function generateMadLibs(event) {
 if (localStorage.getItem('savedStory')) {
   output.innerHTML = "<br> Displaying saved story: " + localStorage.getItem('savedStory');
 }
+
+// Select reset button. Add event listener, call function to reset saved story.
+var resetBtn = document.querySelector("#resetBtn");
+resetBtn.addEventListener('click', resetStory);
+
+// Create function to clear local storage
+function resetStory() {
+  localStorage.clear();
+  output.innerHTML = "";
+}
