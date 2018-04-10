@@ -1,0 +1,38 @@
+/* CSS for mad libs
+ * Jules Leow
+ * 04/09/2018
+ * Colors are based on the Star Wars: A New Hope palette. 
+*/
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 50px;
+  background-color: #4fb3d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #44464f;
+}
+
+.container {
+  width: 50%;
+  flex-direction: column;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 4px;
+}
+
+h1 {
+  color: #ea3d54;
+}
+
+label {
+  color: #ee7b29;
+}
+
+button {
+  padding: 10px 40px;
+  border-radius: 10px;
+  color: #fceda4;
+  background-color: #78bd65;
+}
