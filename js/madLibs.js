@@ -43,8 +43,8 @@ function generateMadLibs(event) {
   event.preventDefault();
 }
 
-  // Check to see if there's anything in local story. If not, add newStory into local storage.
+// Check to see if there's anything in local story. If not, add newStory into local storage.
 
-  if (localStorage.getItem('savedStory')) {
-    output.innerHTML = "<br> Displaying saved story: " + localStorage.getItem('savedStory');
-  }
+if (localStorage.getItem('savedStory')) {
+  output.innerHTML = "<br> Displaying saved story: " + localStorage.getItem('savedStory');
+}
